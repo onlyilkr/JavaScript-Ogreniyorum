@@ -7,7 +7,8 @@ JavaScript'i öğrenme aşamasında edindiğim bilgileri, yazdığım notları t
 
 #### 1. Ders
   - [Degiskenler]
-  - Operatorler
-
+  - [Operatorler]
+  
+[Operatorler]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/1.Ders/Operatorler.html
 [Degiskenler]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/1.Ders/Degiskenler.html
 [Vikipedi]: https://tr.wikipedia.org/wiki/JavaScript
