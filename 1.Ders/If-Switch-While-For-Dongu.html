@@ -1,0 +1,153 @@
+<!-- If - else - else if -->
+<!-- 
+
+if (kosul){
+	//Kosul saglanıyorsa islenecek kisim
+}else if( kosul ){
+	//if koşulu sağlamazsa  else if kontrol edilir
+}else{
+	//Hiçbiri değilse islenecek kısım
+}
+
+
+-->
+
+<!-- Switch Case -->
+<!--
+
+switch(deger){
+	case sart1 : islenecek durum
+	break;
+	case sart2 : islenecek durum
+	break;
+	case sart2 : islenecek durum
+	break;
+	case sart2 : islenecek durum
+	break;
+	default: default olarak islenecek durum
+}
+-->
+
+<!-- While -->
+<!--
+	
+	While(ifade){
+		//Ifade dogru oldugu surece bu kisim isler
+	}
+
+
+	do{
+		//Dongu en az 1 kere calistirilir daha sonra ifade dogru oldugu surece calisir.
+	}while(ifade)
+
+-->
+
+<!-- For -->
+<!-- 
+
+	for (ifade1;ifade2;ifade3){
+		...
+		//ifade1: ilk deger atama
+		//ifade2: koşul
+		//ifade3: her yinelemede islenecek durum
+	}
+
+-->
+
+<!-- Dongu Durumları - (Break,Continue) -->
+<!--
+
+	break; -> donguyu erken sonlandirir
+	continue -> kendinden sonra yazılan ifadeleri atlar, donguyu tekrar sorgular
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.Ders - If - Switch-Case - While - For - Dongu Durumları</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		document.writeln("--If-Else-if--");
+		var yas = 16;
+		if (yas > 18){
+			document.writeln("A ve B sınıfı ehliyet alabilir.</br>");
+		}else if(yas < 18 && yas > 15 ){
+			document.writeln("A sınıfı ehliyet alabilir.</br>");
+		}else{
+			document.writeln("Ehliyet Alamaz</br>");
+		}
+
+
+		document.writeln("--Switch-Case--");
+		var not='FF';
+            switch (not)
+            {
+               case 'AA': document.write("Imkansizi basardin!<br />");
+               break;
+            
+               case 'BB': document.write("Imkansiza bir adim kala!<br />");
+               break;
+            
+               case 'CC': document.write("Daha ne olsun ki!<br />");
+               break;
+            
+               case 'DD': document.write("Kafalar rahat gectin!<br />");
+               break;
+            
+               case 'FF': document.write("Allah Kurtarsın!<br />");
+               break;
+            
+               default:  document.write("Tovbe estagfurullah o ney!<br />")
+            }
+            document.writeln("--While-->");
+            var x = 1;
+            while(x <= 10 ){
+            	document.writeln(x);
+            	x++;
+            }
+            document.writeln("</br>")
+            document.writeln("--Do-While--");
+
+            do{
+            	document.writeln("Ifade yanlis olmasina ragmen 1 kere calisti.</br>");	
+            }while(10 > 11);
+
+            document.writeln("--for--");
+            var i;
+            for(i=10;i <= 20;i++){
+            	document.writeln(i);
+            }
+            document.writeln("</br>")
+
+
+            document.writeln("--Break--");
+            var k = 1;
+	        while (k < 20)
+	      	{
+	            if (k == 5){
+	               break;
+	            }
+	            k = k + 1;
+	            document.writeln(k);
+	        }
+	        document.writeln("</br>");
+
+			document.writeln("--Continue--");
+			var c = 1;
+            while (c < 10)
+            {
+               c = c + 1;
+               
+               if (c == 5){
+                  continue; // Sonrasındaki ifadeler calismaz. Eger saglanıyorsa dongu basa sarar calismaya devam eder.
+               }
+               document.write(c);
+            }	        
+
+	</script>
+</body>
+</html>
