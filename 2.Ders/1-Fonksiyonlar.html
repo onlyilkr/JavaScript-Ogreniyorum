@@ -1,0 +1,81 @@
+<!-- Fonksiyonlar -->
+<!-- 
+
+function fonksiyonIsmi(parametreler){
+	durumlar
+}
+
+function fonksiyonIsmi(parametreler){
+	...
+	return ... 
+}
+
+// Function() Constructor
+
+var test = new Function('par1','par2',...,"Fonksiyon icerigi");
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.Ders - Fonksiyonlar</title>
+	
+	<script type="text/javascript">
+
+		//Parametresiz Kullanım
+		function merhaba(){
+			document.writeln("Merhaba");
+		}
+
+		//Parametreli Kullanım
+		function bilgi(ad,yas){
+			document.writeln(ad+" "+yas+" yaşındadır.");
+		}
+
+		//return
+		function yasKontrol(yas){
+			if (yas < 18){
+				return "Ehliyet Alamaz.";
+			}
+			return "Ehliyet alabilir."
+		}
+
+		function trafikSube(ad,yas){
+			var kontrol = yasKontrol(yas); //Aldığımız yaşı yasKontrol ile kontrol ettiriyoruz. Ardından dönen bilgiyi "kontrol" değişkenine aktarıyoruz.
+			document.writeln(ad+" adlı kişi : "+ kontrol);
+		}
+
+		//Function Constructor
+		var func = new Function('sayi1','sayi2','return sayi1 * sayi2;');
+		function hesapla(){
+			var sonuc;
+			sonuc = func(5,4);
+			document.writeln("Sonuc: "+sonuc);
+		}
+
+	</script>
+
+</head>
+<body>
+	<h3>Parametresiz Kullanım</h3>
+	<button onclick="merhaba()">Buton</button>
+	
+	<hr>
+	<h3>Parametreli Kullanım</h3>
+	<button onclick="bilgi('Sirin Baba',35)">Buton</button>
+
+	<hr>
+	<h3>Return</h3>
+	<button onclick="trafikSube('Ciguli',19)">Kontrol Et</button>
+
+	<hr>
+	<h3>Function Constructor</h3>
+	<button onclick="hesapla()">5 * 4 Hesapla</button>
+
+
+</body>
+</html>
