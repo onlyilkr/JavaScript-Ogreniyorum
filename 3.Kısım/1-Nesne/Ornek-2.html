@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.Kısım - Nesne Örnek 2</title>
+	<script type="text/javascript">
+		function araba(marka,model,yil){
+			this.marka = marka;
+			this.model = model;
+			this.yil = yil;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var kullanici = new araba("Tesla","Model S",2017);
+		document.writeln("Aracın Markası: "+kullanici.marka + "<br> Aracın Modeli: "+ kullanici.model+"<br> Aracın Üretim Yılı: " + kullanici.yil);
+	</script>
+
+</body>
+</html>

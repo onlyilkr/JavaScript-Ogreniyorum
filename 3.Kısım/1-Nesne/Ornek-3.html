@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.Kısım - Nesne Örnek 3</title>
+	<script type="text/javascript">
+		function fiyat(miktar){
+			this.fiyat = miktar;
+			this.kdvFiyat = (miktar*118)/100;
+		}
+		function urun(isim,tur){
+			this.isim = isim;
+			this.tur = tur;
+			this.fiyat = fiyat;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var nesne = new urun("AOC Monitor","Bilgisayar");
+		nesne.fiyat(400);
+
+		document.writeln("Ürün ismi: "+ nesne.isim);
+		document.writeln("<br>Ürün türü: "+ nesne.tur);
+		document.writeln("<br>Ürün fiyatı: "+ nesne.fiyat+ "TL");
+		document.writeln("<br>Ürün KDV dahil(%18) fiyatı: "+ nesne.kdvFiyat + "TL");
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!-- Strings -->
+<!--
+Kaçış Karakteri(\)
+
+			var x = 'Istanbul'a doğru yol aldım';
+Kullanım:	var x = 'Istanbul\'a doğru yol aldım';
+
+			var y = "JJ Abrams, "Dolares"i seviyor muydu? ";
+Kullanım:	var y = "JJ Abrams, \"Dolares\"i seviyor muydu? ";
+
+String Methods
+
+String Uzunlugu -> var len = y.length;
+Arama1 		  	-> var ara = y.indexOf("Dolares");
+Arama2 			-> var ara2 = y.search("Dolares");
+Parçalama		-> var parcala = y.slice(12,19); => Dolares
+Parçalama2		-> var parcala2 = y.substr(12,7); (2.Parametre çıkarılacak parça uzunluğu)
+Değiştirme 		-> var degistir = y.replace("Dolares","Bernard");
+Buyuk Harf		-> var buyukHarf = y.toUpperCase();
+Kucuk Harf		-> var kucukHarf = y.toLowerCase();
+
+-->
+
+<!-- Numbers -->
+<!--
+
+var sayi = 81;
+sayi.toString(16) = //
+sayi.toString(8) = //
+sayi.toString(2) = //
+
+var isim = "Dimitri"
+isNaN(isim); -> True döner. Değişkenin sayı olup olmadığını kontrol eder. Sayı değilse true döner.
+
+var x = 14.911;
+x.toFixed(0); -> 15 	  döndürür
+x.toFixed(2); -> 14.91    döndürür
+x.toFixed(5); -> 14.91100 döndürür
+
+Number()  	  -> Değişkeni sayıya çevirir
+parseFloat()  -> String içerisindeki ilk sayıyı döndürür.
+parseInt()	  -> String içerisindeki ilk sayıyı döndürür. (Tam sayı olarak)
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.Kısım - String & Numbers</title>
+	<style type="text/css">
+		button {
+			padding: 10px;
+			margin: 20px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function yazdir_tek(){
+			var x = 'Istanbul\'a doğ\bru yol aldım';
+			document.writeln(x);
+		}
+		
+		function yazdir_cift(){
+			var y = "JJ Abrams, \"Dolares\"i seviyor muydu? ";
+			document.writeln(y);
+		}
+
+		function method(){
+			var c = "JJ Abrams, \"Dolares\"i seviyor muydu? ";
+			var len = c.length;
+
+			var ara = c.indexOf("Dolares");
+			var ara2 = c.search("Dolares");
+
+			var parcala = c.slice(12,19);
+
+			var parcala2 = c.substr(12,7);
+
+			var degistir = c.replace("Dolares","Bernard");
+			
+			var buyukHarf = c.toUpperCase();
+			var kucukHarf = c.toLowerCase();
+			document.write(
+				"Ifade: " + c + "</br>" +
+				"String Uzunluğu: " + len + "</br>" +
+				"1.Dolares ifadenin neresinden baslıyor: "+ ara + "</br>" +
+				"2.Arama: " + ara2 + "</br>" +
+				"Parçalama: " +parcala+ "</br>" +
+				"Parçalama2: " +parcala2+ "</br>" +
+				"Degistir: " +degistir+ "</br>" +
+				"Buyuk Harf: " +buyukHarf+ "</br>" +
+				"Kucuk Harf: " +kucukHarf+ "</br>" 
+				);
+		}
+		function taban(x){
+			var sayi = 81;
+			if(x == 16){
+				return sayi.toString(16);
+			}else if(x == 8){
+				return sayi.toString(8);
+			}else if (x == 2){
+				return sayi.toString(2);
+			}else{
+				return "Taban 2,8 veya 16'lık değil";
+			}
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<button onclick="yazdir_tek()">Tek Tırnak</button>
+	<button onclick="yazdir_cift()">Çift Tırnak</button>
+	<button onclick="method()">Metodlar</button>
+	<hr>
+	<h4>81'in taban değişimi</h4>
+	<tr>
+		<td><button onclick="alert(taban(16))">16</button></td>
+		<td><button onclick="alert(taban(8))">8</button></td>
+		<td><button onclick="alert(taban(2))">2</button></td>
+	</tr>
+	<hr>
+	<button onclick="alert(isNaN('Dolares'))">"Dolares" sayı mı?</button>
+
+</body>
+</html>

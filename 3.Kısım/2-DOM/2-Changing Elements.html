@@ -1,0 +1,63 @@
+<!--
+
+element.innerHTML = İçeriğini değiştirir
+element.attribute = Belirtilen özelliğin değerini değiştirir
+element.setAttribute(attribute, value) = Belirtilen özelliğin değerini değiştirir
+element.style.property = Style üzerinden değişiklikler yapmamızı sağlar.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.Kısım - DOM Changing Elements</title>
+	<style type="text/css">
+		button{
+			height: 20px;
+			width: 90px;
+		}
+		table tr td {
+			padding: 10px;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		function arkaplan(){
+			var sayfa = document.getElementsByTagName("body")[0];
+			sayfa.style.backgroundColor = "#555";
+		}
+
+		function yazi(){
+			var yazi = document.getElementById("kissa");
+			yazi.innerHTML = "The only thing that does not change is the change itself";
+		}
+
+		function resim(){
+			var resim = document.getElementsByTagName("IMG")[0];
+			resim.src = "http://i.capsspot.com/s/21/5/714448.png";
+			// veya resim.setAttribute("src","http://i.capsspot.com/s/21/5/714448.png");
+		}
+
+	</script>
+</head>
+<body>
+	<table border="1px solid #000">
+		<tr>
+			<td>Arkaplanı değiştir</td>
+			<td>Yazıyı değiştir</td>
+			<td>Resmi değiştir</td>
+		</tr>
+		<tr>
+			<td><button onclick="arkaplan()"></button></td>
+			<td><button onclick="yazi()"></button></td>
+			<td><button onclick="resim()"></button></td>
+		</tr>
+	</table>
+	<p id="kissa">Aşk bu kızıl ötesi, yaralı müzesi, hareket edemem.</p>
+	<img src="http://i.capsspot.com/s/14/7/1144433.png">
+
+</body>
+</html>

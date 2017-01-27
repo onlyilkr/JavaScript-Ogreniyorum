@@ -1,0 +1,51 @@
+<!-- DOM (Document Object Model) -->
+<!-- 
+
+DOM kısaca sayfadaki öğeler üzerinde değişiklikler yapmamıza olanak sağlıyor. Bu işlemler metotlar ile gerçekleşir.
+
+document.getElementById(id) 			-> id değerine sahip öğeyi bulur
+document.getElementsByTagName(name)		-> name tag'ına sahip öğeyi bulur
+document.getElementsByClassName(name) 	-> name class'ına sahip öğeyi bulur
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.Kısım - getElementById</title>
+	<style type="text/css">
+	#box{
+			height: 150px;
+			width: 250px;
+			margin: 10px;
+			padding: 10px;
+			background: #a9a9a9;
+			font-size: 18px;
+			font-color: #5333;
+		}
+	#input{
+		margin:10px;
+		height: 20px;
+		width: 150px;
+	}
+	button{
+		height: 30px;
+
+	}
+	</style>
+	<script type="text/javascript">
+		function degistir(){
+			var value = document.getElementById('input').value; //input içerisindeki değer alınır
+
+			var box = document.getElementById('box');
+			box.innerHTML = value; //Değer box'ın içerine yerleştirir.
+		}
+	</script>
+</head>
+<body>
+	<div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestias dolore, saepe nostrum vero facere.</div>
+	<input id="input"></input>
+	<button onclick="degistir()">Yazıyı Değiştir</button>
+</body>
+</html>

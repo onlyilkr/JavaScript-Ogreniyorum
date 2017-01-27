@@ -1,0 +1,47 @@
+<!-- Events -->
+<!--
+Javascript ve HTML etkileşimi
+
+Örnek:
+onclick
+onmouseover
+onload
+...
+
+DOM (Document Object Model)'de daha detaylı bakılacak.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.Kısım - Event </title>
+	<script type="text/javascript">
+		function check (){
+			alert("Form Gonderildi");
+		}
+		function tarihGoster(){
+			document.getElementById('tarih').innerHTML = Date();
+		}
+		function renkDegistir(obj){
+			obj.style.backgroundColor = '#131355';
+			obj.style.color = '#fff';
+		}
+	</script>
+</head>
+<body>
+	<h4>Form</h4>
+	<button onclick="check()">Gönder</button>
+	<hr>
+
+
+	<div id="tarih"></div>
+	<button onclick="tarihGoster()">Tarih ?</button>
+	<hr>
+
+
+	<p onmouseover="renkDegistir(this)">Mouse yazının üstüne geldiği zaman yazının rengi değişir.</p>
+</body>
+</html>
