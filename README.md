@@ -5,14 +5,28 @@ JavaScript'i öğrenme aşamasında edindiğim bilgileri, yazdığım notları t
 
 >JavaScript, yaygın olarak web tarayıcılarında kullanılmakta olan dinamik bir programlama dilidir. JavaScript ile yazılan istemci tarafı betikler sayesinde tarayıcının kullanıcıyla etkileşimde bulunması, tarayıcının kontrol edilmesi, asenkron bir şekilde sunucu ile iletişime geçilmesi ve web sayfası içeriğinin değiştirilmesi gibi işlevler sağlanır. JavaScript, Node.js gibi platformlar sayesinde sunucu tarafında da yaygın olarak kullanılmaktadır. [Vikipedi]
 
-#### 1. Ders
+#### 1.Kısım
    - [Degiskenler]
    - [Operatorler]
    - [Donguler] - (If-Else/Switch-Case/For/Dongu)
 
-#### 2.Ders
+#### 2.Kısım
    - [Fonksiyonlar]
+   - [Events]
+   - [Strings & Numbers]
 
+#### 3.Kısım
+   - [Nesne] (Örnekler)
+   - DOM
+   	- [Finding Elements]
+   	- [Changing Elements]
+
+
+[Changing Elements]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/3.K%C4%B1s%C4%B1m/2-DOM/2-Changing%20Elements.html
+[Finding Elements]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/3.K%C4%B1s%C4%B1m/2-DOM/1-Finding%20Elements.html
+[Nesne]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/tree/master/3.K%C4%B1s%C4%B1m/1-Nesne
+[Strings & Numbers]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/2.K%C4%B1s%C4%B1m/3-Strings%20%26%20Numbers.html
+[Events]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/2.K%C4%B1s%C4%B1m/2-Events.html
 [Fonksiyonlar]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/2.Ders/1-Fonksiyonlar.html
 [Donguler]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/1.Ders/If-Switch-While-For-Dongu.html
 [Operatorler]: https://github.com/onlyilkr/JavaScript-Ogreniyorum/blob/master/1.Ders/Operatorler.html
